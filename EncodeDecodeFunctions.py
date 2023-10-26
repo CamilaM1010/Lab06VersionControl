@@ -1,3 +1,4 @@
+#Encoder and decoder function
 def encoder(password):
     result = ''
     for char in password:

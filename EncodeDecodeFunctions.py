@@ -1,4 +1,4 @@
-def encoder(password)
+def encoder(password):
     result = ''
     for char in password:
         if int(char) >=7:
@@ -20,5 +20,24 @@ def decoder(password):
 
     return result
 
+def main():
+    print("Menu:\n1. Encode\n2. Decode\n3. Quit")
+    option = int(input("Choose an option: "))
+    while option != 3:
+        if option == 1:
+            password = input("Enter password to encode: ")
+            print(encoder(password))
 
+        elif option == 2:
+            password = input("Enter password to decode: ")
+            print(decoder(password))
+
+        else:
+            break
+
+        print("Menu:\n1. Encode\n2. Decode\n3. Quit")
+        option = int(input("Choose an option: "))
+
+if __name__ == '__main__':
+    main()
 
